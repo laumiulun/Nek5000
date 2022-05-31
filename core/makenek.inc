@@ -231,8 +231,9 @@ case $FCcomp in
                FR8="-r8"
                FF77="-std=legacy"
                ;;
-  *ifort*)     FCPP="-fpp"
-               FR8="-r8 -fpconstant"
+  *ifort*)     FCPP="-cpp"
+               FR8="-fdefault-real-8 -fdefault-double-8"
+               FF77="-w -std=legacy"
                ;;
   *xlf*)       FCPP="-qsuffix=cpp=f"
                FR8="-qrealsize=8 -qdpc=e"
